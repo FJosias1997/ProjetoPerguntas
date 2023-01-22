@@ -11,11 +11,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<Map<String, dynamic>> perguntas = globals.listaPerguntas;
   int perguntaSelecionada = 0;
   int pontuacaoTotal = 0;
-  List<String> resp = [];
-  List<int> pontos = [];
+
+  final List<Map<String, dynamic>> perguntas = globals.listaPerguntas;
 
   void _respostaPergunta(int pontos) {
     if (temPerguntaSelecionada) {
@@ -40,6 +39,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> resp = [];
+    List<int> pontos = [];
     var listaObjeto = temPerguntaSelecionada
         ? perguntas[perguntaSelecionada]['respostas']
         : [];

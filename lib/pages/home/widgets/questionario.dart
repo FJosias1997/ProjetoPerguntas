@@ -30,9 +30,6 @@ class _QuestionarioPageState extends State<QuestionarioPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Questao(questao: widget.pergunta),
-            // ...widget.respostas
-            //     .map(((e) => Resposta(resposta: e, onPressed: widget.onPressed)))
-            //     .toList(),
             ListView.builder(
                 itemCount: widget.respostas.length,
                 shrinkWrap: true,
